@@ -1,11 +1,9 @@
 def obter_numero_valido(prompt):
     while True:
         entrada = input(prompt)
-        # Verificar se o usuário digitou "sair"
         # ########
         if entrada.lower() == 'sair':
             return entrada
-        # Verificar se a entrada é numérica
         ########################
         if entrada.replace('.', '', 1).isdigit() or entrada.replace('-', '', 1).replace('.', '', 1).isdigit():
             return float(entrada)
@@ -22,11 +20,9 @@ while True:
     if renda == 'sair':
         break
     
-    # Acumular a renda no total
     
     total_renda += renda
 
-# Exibir a renda total
 #########################
 print(f"A sua renda anual é: {total_renda:.2f}")
 
